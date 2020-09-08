@@ -3,4 +3,4 @@
 *  <strong> wx_shop-web： </strong> 为系统前台 微信小程序版，给顾客使用;前台实现的业务功能有：顾客账号登录和注册（没错，我的小程序没有让他直接获取顾客微信信息，而是做的账号密码进行登录验证，可注册）、商品的品牌分类显示以及模糊查询、商品目录到对应商品详情页的跳转显示、商品详情页有直接下单和加入购物车的操作、顾客购物车操作的动态变化以及合计下单、订单的生成和订单明细的生成、顾客个人信息的维护等等;</br>
 前台访问需扫微信小程序二维码申请访问：[系统前台](https://www.cxysl.cn/cxysl_wx.jpg)</br></br>
 
-此为毕业设计的前台,我毕业设计做的为微信商城,另外项目：[后台](https://github.com/cxysl/wx_shop-backstage)、[接口](https://github.com/cxysl/wx_shop_api)
+此为毕业设计的前台,我毕业设计做的为微信商城,另外项目前台、接口源码：[后台](https://github.com/cxysl/wx_shop-backstage)、[接口](https://github.com/cxysl/wx_shop_api)
