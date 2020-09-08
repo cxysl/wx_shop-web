@@ -1,0 +1,82 @@
+
+<view id="main">
+  <view id="up">
+    注册页面
+  </view>
+
+  <view id="from">
+    <form bindsubmit='doLogin'>
+      <van-cell-group>
+      <view class="title">账号信息</view>
+        <van-field
+          name="username"
+          value=""
+          required
+          clearable
+          label="用户名"
+          icon="question-o"
+          placeholder="请输入用户名"
+        />
+        <van-field
+          name="password"
+          value=""
+          required
+          clearable
+          label="密码"
+          icon="question-o"
+          placeholder="请输入密码"
+        />
+        <view class="title">个人资料信息</view>
+        <van-field
+          name="customerName"
+          value=""
+          required
+          clearable
+          label="姓名"
+          icon="question-o"
+          placeholder="请输入姓名"
+          bind:click-icon="onClickIcon"
+        />
+        <van-field
+          name="customerSex"
+          value=""
+          clearable
+          label="性别"
+          icon="question-o"
+          placeholder="请输入性别"
+          bind:click-icon="onClickIcon"
+        />
+        <van-field
+          name="customerPhone"
+          value=""
+          required
+          clearable
+          label="手机号"
+          icon="question-o"
+          placeholder="请输入手机号"
+          bind:click-icon="onClickIcon"
+        />
+        <van-field
+          name="customerAddress"
+          value=""
+          required
+          clearable
+          label="收货地址"
+          icon="question-o"
+          placeholder="请输入收货地址"
+          bind:click-icon="onClickIcon"
+        />
+        <van-field
+          name="customerPicture"
+          value=""
+          clearable
+          label="头像地址"
+          icon="question-o"
+          placeholder="头像地址"
+          bind:click-icon="onClickIcon"
+        />
+      </van-cell-group>
+        <button form-type='submit' type='primary' style='width:40%'>提交</button>
+    </form>
+  </view><!-- form表单 -->
+</view>

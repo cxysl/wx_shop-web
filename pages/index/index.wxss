@@ -1,0 +1,170 @@
+.body{
+				font: normal normal 14rpx  "微软雅黑";
+				color: gray;
+				background-color: gainsboro;
+			}
+			
+			/* 宽：750:400  100%*/
+			/* 高：650 100%*/
+			#all{
+				width: 750rpx;
+				height: 100%;	
+				position: absolute;	
+				border: 1rpx solid white;
+				background-color: white;	
+			}
+			#head{
+				background-color: #F72838;
+				background: linear-gradient(orchid,#F72838);
+				width: 750rpx;/*400 172*/
+				height: 26%;    /*172*/
+				position: absolute;
+			}
+			.a:hover{
+				color: #00FCE0;
+			}
+			#head:hover{
+				background: linear-gradient(#F72838,orchid);
+			}
+			.setting{   /*设置*/
+				position: absolute;
+				/*border: 1rpx dashed deepskyblue;*/
+				width: 120rpx;    /*60*/
+				height: 120rpx;   /*60*/
+				color: white;
+				font: normal bolder 60rpx  "微软雅黑";
+				margin-left: 10rpx;
+			}
+			.envelope{   /*邮箱*/
+				position: absolute;
+				width: 120rpx;
+				height: 120rpx;
+				color: white;
+				font: normal bolder 60rpx  "微软雅黑";/*30*/
+				left: 680rpx;
+			}
+			.head_portrait{  /* 头像*/ /*400 172*/
+				width: 120rpx;
+				height: 120rpx;   /*60*/
+				position: absolute;
+				left: 340rpx;
+				top: 40rpx;
+			}
+      .head_portrait image{
+        width: 100%;  /*60*/
+				height: 100%;
+				border-radius: 50%;
+      }
+			.name{  /*昵称*/
+				position: absolute;
+        width: 120rpx;
+        text-align: center;
+				font: normal bolder 24rpx  "微软雅黑";
+				color: white;
+				top: 170rpx;     /*85*/
+				left: 340rpx;   /*165*/
+			}
+			.manage{  /*管理浮标*/		/*400 172*/
+				position: absolute;
+				background-color: gray;
+				opacity: 0.5;
+				border-radius: 10rpx 0 0 10rpx;
+				padding-left: 10rpx;
+				padding-right: 14rpx;
+				font: normal bolder 20rpx  "微软雅黑";
+				color: #FAE300;
+				top: 175rpx;   /*87*/
+				left: 650rpx;   /*340*/
+			}
+			.up{
+				position: absolute;
+				width: 710rpx;      /*400 172  12.8 5.5*/
+				height: 100rpx;      /*12.4 1.6*/
+				background-color: white;
+				border-radius: 10rpx;
+				border: 1rpx solid white;
+				box-shadow: 5rpx 5rpx 5rpx 6rpx rgba(205, 205, 205, .6);
+				left: 25rpx;
+				top: 21%;
+			}
+			.people{
+				margin-left: 30rpx;
+        font: normal normal 28rpx  "微软雅黑";
+				line-height: 100rpx;
+				float: left;
+			}
+			strong{
+				color: red;
+			}
+			.money{
+				float: right;
+        font: normal normal 28rpx  "微软雅黑";
+				line-height: 100rpx;
+				margin-right: 30rpx;
+			}
+			#order{
+				position: absolute;
+				top: 30%;
+				width: 750rpx;
+				/*height: 100rpx;*/
+				/*border: 1rpx dashed deepskyblue;*/
+			}
+			.order_up{  /*订单*/
+				width:750rpx;
+				height: 60rpx;
+				margin-top: 20rpx;
+				line-height: 60rpx;
+			}
+			.order_up_left{  /* 我的订单*/
+				float: left;
+				font: normal bold 28rpx  "微软雅黑";
+				margin-left:10rpx ;
+			}
+			.order_up_rigth{  /*查看全部订单*/
+				float: right;
+				font: normal bold 24rpx  "微软雅黑";
+				margin-right: 10rpx;
+			}
+			.order_up_center{   /*横线*/
+				clear: both;
+			}
+			.order_down{   /*待付款……*/
+				width: 750rpx;
+				height: 100rpx;
+        font: normal normal 28rpx  "微软雅黑";
+				overflow: hidden;
+			}
+			.order_down .ul .li{
+				float: left;
+				width: 120rpx;
+				text-align: center;
+				margin-left: 60rpx;
+				margin-top: 10rpx;
+			}
+      .hr{
+        position: absolute;
+				top: 50%;
+        width: 100%;
+        height: 20rpx;
+        background-color: gainsboro;
+      }
+      
+     .end{
+       position: absolute;
+       width: 100%;
+        top: 54%;
+        font: normal bold 40rpx  "微软雅黑";
+				text-align: center;
+     }
+     /* .hr2{
+        position: absolute;
+				top: 56%;
+        width: 100%;
+        height: 5rpx;
+        background-color: gainsboro;
+      } */
+			van-grid{
+        position: absolute;
+        top: 60%;
+        width: 100%;
+      }

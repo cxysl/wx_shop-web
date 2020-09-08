@@ -1,0 +1,175 @@
+<!--logs.wxml-->
+<view class="main">
+  <view class="up">
+    <van-row> <!-- 搜所框   参考有赞：https://youzan.github.io/vant-weapp/#/search -->
+      <van-col span="24">
+        <view class="query">
+          <van-search
+            value="{{ value }}"
+            placeholder="请输入搜索关键词"
+            use-action-slot
+            bind:change="onChange"
+            bind:search="onSearch"
+          >
+            <view slot="action"   bindtap="onClick">搜索</view>
+          </van-search>
+        </view>
+      </van-col>
+    </van-row>
+    
+    <van-row><van-col span="24"><view class="hr"></view></van-col></van-row>
+
+    <view class="heatTitel">
+      <van-row><van-col span="24" class="font1">全部商品</van-col></van-row>
+      <van-row><van-col span="24" class="font2">精选好物</van-col></van-row>
+    </view>
+
+    <van-row><van-col span="24"><view class="hr"></view></van-col></van-row>
+
+  </view>
+
+  <!-- ------------------------------------------分页栏 ----------------------------------------------  -->
+  <!--主盒子-->
+  <view class="container">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+      <view class="nav_left_items {{curNav == 1 ? 'active' : ''}}" 
+            bindtap="switchRightTab"  data-id="1">
+        特步
+      </view>
+      <view class="nav_left_items {{curNav == 2 ? 'active' : ''}}" 
+            bindtap="switchRightTab"  data-id="2">
+        花花公子
+      </view>
+      <view class="nav_left_items {{curNav == 3 ? 'active' : ''}}" 
+            bindtap="switchRightTab" data-id="3">
+        阿迪达斯
+      </view>
+      <view class="nav_left_items {{curNav == 4 ? 'active' : ''}}" 
+            bindtap="switchRightTab" data-id="4">
+        李宁
+      </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class="nav_right">
+      <!-- 特步 catchtouchmove="false"-->
+      <view wx:if="{{curNav==1}}">
+         <!-- 商品卡片   参考有赞：https://youzan.github.io/vant-weapp/#/card#slot -->
+          <scroll-view scroll-y="true" style="height: 1000rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+              <view wx:for="{{items}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+              <view data-goodsid="{{item.goodsId}}"  bindtap="onClick1">
+              <van-card
+                num="{{item.goodsCount}}"
+                price="{{item.goodsPrice}}"
+                desc="{{item.goodsDescribe}}"
+                title="{{item.goodsName}}"
+                thumb="{{item.goodsPicture}}"
+               
+              >
+<!-- 购买数量 -->
+              <view slot="tags" class="tag">
+                <view class="tags">{{item.goodLabel1}}</view>
+                <view class="tags">{{item.goodLabel2}}</view>
+                <view class="tags">{{item.goodLabel3}}</view>
+              </view>
+      <!-- 隐藏域 -->
+              <!-- <view hidden="true">{{item.goodsId}}</view> -->
+
+                <view slot="footer" bindtap="shoppingcar">
+                  <van-icon name="shopping-cart-o" color="red" size="20px" />
+                </view>
+              </van-card>
+               </view>
+            </view> 
+
+          </scroll-view>
+      </view>
+
+      <!-- 花花公子 catchtouchmove="false"-->
+      <view wx:if="{{curNav==2}}">
+      <scroll-view scroll-y="true" style="height: 1000rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view wx:for="{{items2}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+          <view data-goodsid="{{item.goodsId}}"  bindtap="onClick1">
+              <van-card
+                num="{{item.goodsCount}}"
+                price="{{item.goodsPrice}}"
+                desc="{{item.goodsDescribe}}"
+                title="{{item.goodsName}}"
+                thumb="{{item.goodsPicture}}"
+              >
+              <view slot="tags" class="tag">
+                <view class="tags">{{item.goodLabel1}}</view>
+                <view class="tags">{{item.goodLabel2}}</view>
+                <view class="tags">{{item.goodLabel3}}</view>
+              </view>
+              <view hidden="true">{{item.goodsId}}</view>
+                <view slot="footer">
+                  <van-icon name="shopping-cart-o" color="red" size="20px" />
+                </view>
+              </van-card>
+            </view> 
+            </view>
+
+              </scroll-view>
+      </view>
+
+      <!-- 阿迪达斯 -->
+      <view wx:if="{{curNav==3}}">
+      <scroll-view scroll-y="true" style="height: 1000rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        
+            <view wx:for="{{items3}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+            <view data-goodsid="{{item.goodsId}}"  bindtap="onClick1">
+              <van-card
+                num="{{item.goodsCount}}"
+                price="{{item.goodsPrice}}"
+                desc="{{item.goodsDescribe}}"
+                title="{{item.goodsName}}"
+                thumb="{{item.goodsPicture}}"
+              >
+              <view slot="tags" class="tag">
+                <view class="tags">{{item.goodLabel1}}</view>
+                <view class="tags">{{item.goodLabel2}}</view>
+                <view class="tags">{{item.goodLabel3}}</view>
+              </view>
+              <view hidden="true">{{item.goodsId}}</view>
+                <view slot="footer">
+                  <van-icon name="shopping-cart-o" color="red" size="20px" />
+                </view>
+              </van-card>
+            </view>
+            </view> 
+
+        </scroll-view>
+      </view>
+
+      <!-- 李宁 -->
+      <view wx:if="{{curNav==4}}">
+      <scroll-view scroll-y="true" style="height: 1000rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        
+        <view wx:for="{{items4}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+          <view data-goodsid="{{item.goodsId}}"  bindtap="onClick1">
+              <van-card
+                num="{{item.goodsCount}}"
+                price="{{item.goodsPrice}}"
+                desc="{{item.goodsDescribe}}"
+                title="{{item.goodsName}}"
+                thumb="{{item.goodsPicture}}"
+              >
+              <view slot="tags" class="tag">
+                <view class="tags">{{item.goodLabel1}}</view>
+                <view class="tags">{{item.goodLabel2}}</view>
+                <view class="tags">{{item.goodLabel3}}</view>
+              </view>
+              <view hidden="true">{{item.goodsId}}</view>
+                <view slot="footer">
+                  <van-icon name="shopping-cart-o" color="red" size="20px" />
+                </view>
+              </van-card>
+            </view> 
+            </view>
+
+        </scroll-view>
+      </view>
+    </view>   <!-- 右侧栏回 -->
+  </view>   <!-- 分页栏盒子回 -->
+</view>

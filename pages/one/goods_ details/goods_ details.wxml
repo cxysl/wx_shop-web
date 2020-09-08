@@ -1,0 +1,54 @@
+<!--pages/one/goods_ details/goods_ details.wxml-->
+<view id="main">
+<!-- 商品轮播图 -->
+  <view class='lun'>
+    <swiper indicator-dots='true' indicator-color='pink' indicator-active-color='hotpink' autoplay='true'    duration='500' circular='true' interval='2000'>
+      <swiper-item>
+        <image src='{{goodsPicture.pictureOne}}'></image>    
+        <!--  {{goodsPicture.pictureOne}} -->
+      </swiper-item>
+      <swiper-item>
+        <image src='{{goodsPicture.pictureTwo}}'></image>    
+        <!--  {{goodsPicture.pictureTwo}} -->
+      </swiper-item>
+      <swiper-item>
+        <image src='{{goodsPicture.pictureThree}}'></image>    
+        <!--  {{goodsPicture.pictureThree}} -->
+      </swiper-item>
+      <swiper-item>
+        <image src='{{goodsPicture.pictureFour}}'></image>    
+        <!--  {{goodsPicture.pictureFour}} -->
+      </swiper-item>
+      <swiper-item>
+        <image src='{{goodsPicture.pictureFive}}'></image>    
+        <!--  {{goodsPicture.pictureFive}}  -->
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 商品详细信息 -->
+  <view id="goods">
+    <text class="font1"> {{goods.goodsDescribe}} </text> <!-- 描述信息   {{goods.goodsDescribe}}   -->
+    <text class="price">￥{{goods.goodsPrice}}</text> <!-- 商品售价   {{goods.goodsPrice}}  -->
+    <view class="hr1"></view>
+    <view class="goodLabel">                        <!-- 商品标签 -->
+      <text class="xxx">特性:</text>
+      <text class="label">{{goods.goodLabel1}}</text>   <!--  {{goods.goodLabel1}}  -->
+      <text class="label">{{goods.goodLabel2}}</text><!--  {{goods.goodLabel2}}  -->
+      <text class="label">{{goods.goodLabel3}}</text><!--  {{goods.goodLabel3}}  -->
+    </view>
+    <view class="hr1"></view>
+    <view class="go">
+      <text class="left">发货地:武汉</text>
+      <text class="right">剩余：{{goods.goodsCount}}</text> <!-- {{goods.goodsCount}} -->
+    </view>
+  </view>
+
+  <view id="foot">
+    <view class="talke">
+      <van-icon name="chat-o" size="40px" />
+    </view>
+    <view class="shoppingcar" bindtap="addShoppingCar">加入购物车</view>
+    <view class="buy" bindtap="buy">立即购买</view>
+  </view>
+</view>

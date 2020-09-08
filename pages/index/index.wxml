@@ -1,0 +1,79 @@
+<view class="body">
+		<view id="all">
+			<!--顶部-->
+			<view id="head">
+				<!--设置-->
+				<view class="setting">
+					<view class="a"><van-icon name="setting-o" /></view >
+				</view>
+				<!--邮箱-->
+				<view class="envelope">
+					<view class="a"><van-icon name="envelop-o" /></view >
+				</view>
+				<!--头像-->
+				<view class="head_portrait">
+          <image wx:if="{{user.customerPicture.length>0}}" src="{{user.customerPicture}}"></image>
+        </view>
+				<!--昵称-->
+				<view class="name">
+          <view class="a">{{user.customerName}}</view >
+        </view>
+				<!--管理-->
+				<view class="manage" bindtap="user_Means">
+          <view class="a">账户管理</view >
+        </view>
+			</view>
+			<!--浮层-->
+			<view class="up">
+				<view class="people">
+					<view class="a">余额<strong>500.00</strong></view >
+				</view>
+				<view class="money">
+					<view class="a">积分<strong>66666</strong></view >
+				</view>
+			</view>
+			<!--我的订单-->
+			<view id="order">
+				<view class="order_up">
+					<view class="order_up_left"><view class="a">我的订单</view ></view>
+					<view class="order_up_rigth"><view class="a" bindtap="query_order">查看全部订单></view ></view>
+				</view>
+				<view class="order_up_center"><hr size="3" color="#F6F6F6"/></view>
+				<view class="order_down">
+					<view class="ul">
+						<view class="li">
+							<view class="a"><van-icon name="after-sale" size="50rpx" /></view >
+							<view class="a"><p>待付款</p></view >
+						</view>
+						<view class="li">
+							<view class="a"><van-icon name="logistics" size="50rpx" /></view >
+							<view class="a"><p>待发货</p></view >
+						</view>
+						<view class="li">
+							<view class="a"><van-icon name="upgrade" size="50rpx" /></view >
+							<view class="a"><p>待收货</p></view >
+						</view>
+						<view class="li">
+							<view class="a"><van-icon name="edit" size="50rpx" /></view >
+							<view class="a"><p>待评价</p></view >
+						</view>
+					
+					</view>
+				</view>
+			</view>
+      <!-- 分隔线 -->
+			<view class="hr"></view>
+      <view class="end"><view class="a">为您推荐</view ></view>
+       <!-- 分隔线 -->
+			<!-- <view class="hr2"></view> -->
+			<van-grid column-num="2" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{ 6}}" wx:for-item="x" wx:key="key" >
+          <image
+            style="width: 100%; height: 90px;"
+            src="https://img.yzcdn.cn/vant/apple-{{ x + 1 }}.jpg"
+          />
+        </van-grid-item>
+      </van-grid>
+		</view>
+	</view>
+  

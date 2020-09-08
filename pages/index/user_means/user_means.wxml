@@ -1,0 +1,97 @@
+<!--pages/index/user_means/user_means.wxml-->
+<view class="all">
+  <form bindsubmit = "update">
+    <!-- 文本框只读不可编辑 -->
+    <view wx:if="{{state==='true'}}">
+      <van-cell-group>
+        <van-field
+          name="customerName"
+          value="{{user.customerName}}"
+          label="姓名"
+          left-icon="contact"
+          readonly
+          required
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          name = "customerSex"
+          value="{{user.customerSex}}"
+          label="性别"
+          left-icon="eye-o"
+          readonly
+        />
+          <!-- border="{{ false }}" -->
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          name = "customerPhone"
+          value="{{user.customerPhone}}"
+          label="手机号"
+          left-icon="phone-o"
+          readonly
+          required
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          name="customerAddress"
+          value="{{user.customerAddress}}"
+          label="收货地址"
+          left-icon="home-o"
+          readonly
+          required
+        />
+      </van-cell-group>
+    </view>
+    <!-- 文本框可编辑 -->
+    <view wx:if="{{state==='false'}}">
+      <van-cell-group>
+        <van-field
+          name="customerName"
+          value="{{user.customerName}}"
+          label="姓名"
+          left-icon="contact"
+          required
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          name="customerSex"
+          value="{{user.customerSex}}"
+          label="性别"
+          left-icon="eye-o"
+        />
+          <!-- border="{{ false }}" -->
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          name="customerPhone"
+          value="{{user.customerPhone}}"
+          label="手机号"
+          left-icon="phone-o"
+          required
+        />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field
+          name="customerAddress"
+          value="{{user.customerAddress}}"
+          label="收货地址"
+          left-icon="home-o"
+          required
+        />
+      </van-cell-group>
+    </view>
+    <view class="hr1"></view>
+    <view>
+      <van-button bindtap="out" type="warning" size="large">退出登录</van-button>
+      <view class="hr"></view>
+      <van-button bindtap="modify"  size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)">编辑            </van-button>
+      <view class="hr"></view>
+      <!-- <van-button formType="submit"  size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)">提交</van-button> -->
+      <button form-type='submit' type='primary' size="large">提交</button>
+    </view>
+  </form>
+</view>
+    

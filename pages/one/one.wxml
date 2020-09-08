@@ -1,0 +1,151 @@
+<view class="main">
+  <!-- <van-row>  
+    <van-col span="24"> -->
+      <view class="logo">   <!--顶部logo -->
+      <image src='http://www.cxysl.cn/images/WX_img/C_logo.png'></image>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+
+<!--  <van-row><van-col span="24"><view class="hr"></view></van-col></van-row> -->
+
+  <!-- <van-row> 
+    <van-col span="24"> -->
+      <view class="query"> <!-- 搜所框   参考有赞：https://youzan.github.io/vant-weapp/#/search -->
+        <van-search
+          value="{{ value }}"
+          placeholder="请输入搜索关键词"
+          use-action-slot
+          bind:change="onChange"
+          bind:search="onSearch"
+        >
+          <view slot="action" bindtap="onClick">搜索</view>
+        </van-search>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+
+  <!-- <van-row><van-col span="24"> -->
+  <view class="hr"></view>
+  <!-- </van-col></van-row> -->
+
+  <view class="heatTitel">
+  <!-- <van-row><van-col span="24" class="font1"> -->
+  <view class="font1">火爆商品</view>
+  <!-- </van-col></van-row> -->
+  <!-- <van-row><van-col span="24" class="font2"> -->
+  <view class="font2">每月初更新最火爆的商品</view>
+  <!-- </van-col></van-row> -->
+  </view>
+
+  <!-- <van-row>  
+    <van-col span="24"> -->
+      <view class="heatGoods" bindtap="onClick1"><!-- 最火商品1 -->
+        <!-- 隐藏域 -->
+          <view hidden="true">{{goodsId1}}</view>
+        <view class="floatfont"></view>
+        <view class="floatfont1">2019年最新球鞋</view>
+        <image src='https://www.cxysl.cn/images/FZ/wx01.jpg'></image>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+
+  <view class="position"></view>
+
+<!-- <van-row><van-col span="24"> -->
+<view class="hr"></view>
+<!-- </van-col></van-row> -->
+
+     <!-- 最火商品2 -->
+  <view class="heatGoods2">
+     <view class="heatGoods3">
+      <image src='https://www.cxysl.cn/images/FZ/tb_xz01.jpg'/>
+      <text>特步2020年最潮女鞋\n</text>
+      <text class="money">￥100.5</text>
+    </view>
+    <view class="heatGoods3">
+      <image src='https://www.cxysl.cn/images/FZ/hh_kz01.jpg'/>
+      <text>花花公子2019年年度销量第一\n</text>
+      <text class="money">￥89.5</text>
+    </view>
+    <view class="heatGoods3">
+      <image src='https://www.cxysl.cn/images/FZ/ln_sy02.jpg'/>
+      <text>李宁2020年最潮运动装\n</text>
+      <text class="money">￥189</text>
+    </view>
+  </view>
+
+  <!-- <van-row><van-col span="24"> -->
+  <view class="hr"></view>
+  <!-- </van-col></van-row> -->
+
+  <view class="heatTitel">
+  <!-- <van-row><van-col span="24" class="font1"> -->
+  <view class="font1">良心商品</view>
+  <!-- </van-col></van-row> -->
+  <!-- <van-row><van-col span="24" class="font2"> -->
+  <view class="font2">每周上架几款老程亲测试用过的产品</view>
+  <!-- </van-col></van-row> -->
+  </view>
+
+  <!-- <van-row>  
+    <van-col span="24"> -->
+      <view class="heatGoods"><!-- 良心商品1 -->
+        <view class="floatfont"></view>
+        <view class="floatfont1" style="color:red">2020阿迪最潮装</view>
+        <image src='https://www.cxysl.cn/images/FZ/ad_kz01.jpg'></image>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+  <view class="position"></view>
+
+  <!-- <van-row><van-col span="24"> -->
+  <view class="hr"></view>
+  <!-- </van-col></van-row> -->
+
+  <!-- <van-row>  
+    <van-col span="24"> -->
+      <view class="heatGoods"><!-- 良心商品2 -->
+        <view class="floatfont"></view>
+        <view class="floatfont1">阿迪销量最高T血</view>
+        <image src='https://www.cxysl.cn/images/FZ/ad_sy01.jpg'></image>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+  <view class="position"></view>
+  <!-- <van-row><van-col span="24"> -->
+  <view class="hr"></view>
+  <!-- </van-col></van-row> -->
+
+  <!-- <van-row>  
+    <van-col span="24"> -->
+      <view class="heatGoods"><!-- 良心商品3 -->
+        <view class="floatfont"></view>
+        <view class="floatfont1" style="color:red">花花公子爆款T血</view>
+        <image src='https://www.cxysl.cn/images/FZ/wxhh.jpg'></image>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+  <view class="position"></view>
+ <!-- <van-row><van-col span="24"> -->
+  <view class="hr"></view>
+  <!-- </van-col></van-row> -->
+
+  <!-- <van-row> 
+    <van-col span="24"> -->
+      <view class="heatGoods"> <!-- 良心商品4 -->
+        <view class="floatfont"></view>
+        <view class="floatfont1">特步爆款裤子</view>
+        <image src='https://www.cxysl.cn/images/FZ/wx05.jpg'></image>
+      </view>
+    <!-- </van-col>
+  </van-row> -->
+  <view class="position"></view>
+<!-- <van-row><van-col span="24"> -->
+  <view class="hr"></view>
+  <!-- </van-col></van-row> -->
+
+  <view id="foot">
+    品味生活
+  </view>
+</view>

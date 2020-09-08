@@ -1,0 +1,112 @@
+.main{
+  width: 100%;
+  height: 100%;
+  /* background-color:#F7F8FA; */
+}
+.up{
+  width: 100%;
+  height: 18%
+}
+van-search{
+  width: 100%;
+  height: 10%;
+}
+.heatTitel{
+  width: 100%;
+  height: 8%;
+  /* height: 40px; */
+  text-align: center;
+  background-color: #ffffff;
+  letter-spacing: 3px;  /*字间距*/
+}
+.font1{
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: "微软雅黑";
+}
+.font2{
+  font-size: 10px;
+  font-family: "微软雅黑";
+}
+.hr{
+  width: 100%;
+  height: 2px;
+  background-color: #F7F8FA;
+}
+van-card{
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px solid white;
+} 
+
+.tag{
+  display: flex;
+}
+.tags{
+  border: 1px solid red;
+  margin-right: 5px;
+  padding: 2px;
+  font-size: 10px;
+  color:red;
+}
+
+
+/* 2.主盒子 */  
+.container {  
+  width: 100%;             /* 宽度占屏幕的100% */
+  height: 82%;            /* 高度占屏幕的100% */
+  position: absolute;
+}
+/* 3.左盒子*/ 
+ /* 3.1. 左侧栏主盒子总体设置 */  
+.nav_left{  
+  position:absolute;    /* 使用绝对定位 */
+  top:0px;              /* 距离上边距：0px */
+  left:0px;             /* 距离左边距：0px */
+  width: 25%;           /* 每个item所占的宽度 */
+  height: 100%;
+  background: #f5f5f5;  /* 主盒子设置背景色为灰色 */  
+}
+/* 3.2. 左侧栏的每个item */  
+.nav_left .nav_left_items{ 
+  text-align: left;   /* 文字居中显示 */ 
+  height: 40px;      /* 每个item高40px*/
+  line-height: 40px; 
+  padding: 6px 0;    /* 上内边距和下内边距是 6px[增加高度]  右内边距和左内边距是 0px*/
+  padding-left: 5px; 
+  border-bottom: 1px solid #dedede;   /* 设置下边线 */  
+  font-size: 14px;   /* 设置文字大小：14px */ 
+  font-weight: bolder;
+} 
+/* 3.3. 左侧栏list的item被选中时*/  
+.nav_left .nav_left_items.active{ 
+  background: #fff;  /* 背景色变成白色 */  
+  color: red;    /* 字体编程蓝色 */
+  border-left: 3px solid red;  /* 设置边框的宽度以及颜色 */
+}
+/* 4.右盒子 */  
+/* 4.1. 右侧栏主盒子总体设置 */  
+.nav_right{  
+  position: absolute;   /* 使用绝对定位 */  
+  top: 0;         /* 距离上边距：0px */
+  left: 25%;     /* 距离左边距：80px */
+  width: 75%;     /* 右侧主盒子所占宽度 */
+  height: 100%;  /* 右侧主盒子所占高度 */
+  margin-left: 5px;
+  box-sizing: border-box;  /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+}
+
+/* 4.2. 右侧栏中的每个item */  
+.nav_right .nav_right_items{  
+  float: left;          /* 浮动向左 */  
+  width: 33.33%;        /* 每个item设置宽度是33.33% */  
+  height: 120px;        /* 每个item设置高度是120px */ 
+  text-align: center;   /* 设置图片下方的提示文字居中显示 */
+}  
+/* 4.3. 右侧栏中的每个item的图样式设置 */  
+.nav_right .nav_right_items image{  
+  width: 60px;         /* 给图片设置宽度 */  
+  height: 60px;        /* 给图片设置高度 */  
+  margin-top: 15px;    /* 图片距离上边距15px */  
+  border-radius: 40%;  /* 给图片添加圆角边框 */
+}  

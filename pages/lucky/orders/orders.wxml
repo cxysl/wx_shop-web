@@ -1,0 +1,38 @@
+<!--pages/lucky/orders/orders.wxml-->
+<view>
+  <view wx:if="{{hasList}}">
+    <!-- 开始遍历 -->
+      <view class="cart-list" wx:for="{{orders}}" wx:key="{{index}}">
+        <view class="ereryone">
+          <view class="hr"></view>
+          <view class="orderListTitle">
+            订单号:<text class="userName">{{item.orderId}}</text>
+            <view data-orderid="{{item.orderId}}"  bindtap="onClick1">
+              <text class="orderStatus">订单明细</text>
+            </view>
+          </view>
+          <view class="orderListDetails">
+            <view class="productImg">
+              <van-icon name="balance-pay" size="80px" color="red"/>
+              <!-- <image src="http://www.cxysl.cn/images/TuBiao/034.png" background-size="cover"></image> -->
+            </view>
+            <view class="productInfo">
+            <view>下单时间:</view>
+              <view class="productTitle"> {{item.orderDate}}</view>
+              订单状态:<text class="productPrice">{{item.orderState}}</text>
+            </view>
+          </view>
+          <view class="productCount">
+            <view>
+              订单总金额：<text class="money">￥{{item.orderPrice}}</text>
+            </view>
+          </view>
+        </view>
+        
+      </view>
+  </view>
+  <!-- 没有订单记录 -->
+    <view wx:else>
+        <view class="cart-no-data">你还没有下单哦~</view>
+    </view>
+</view>

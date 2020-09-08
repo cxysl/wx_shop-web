@@ -1,0 +1,13 @@
+/* pages/two/query.wxss */
+
+.text11{
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+  margin: 0 auto;
+}
+van-card{
+  width: 100%;
+  /* margin-bottom: 1px; */
+  border: 1px solid white;
+}

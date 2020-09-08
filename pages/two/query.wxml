@@ -1,0 +1,51 @@
+<!--pages/two/query.wxml-->
+<view class="main">
+  <view class="up">
+    <van-row> <!-- 搜所框   参考有赞：https://youzan.github.io/vant-weapp/#/search -->
+      <van-col span="24">
+        <view class="query">
+          <van-search
+            value="{{ value }}"
+            placeholder="请输入搜索关键词"
+            use-action-slot
+            bind:change="onChange"
+            bind:search="onSearch"
+          >
+            <view slot="action" bindtap="onClick">搜索</view>
+          </van-search>
+        </view>
+      </van-col>
+    </van-row>
+
+    <van-row><van-col span="24"><view class="hr"></view></van-col></van-row>
+
+  </view>
+
+  <!-- 搜索到的商品 -->
+  <view>
+    <view class="text11" wx:if="{{queryitems.length==0}}">
+        暂无该商品！
+    </view>
+    <!-- <scroll-view scroll-y="true" style="height: 100%" bindscrolltoupper="upper" bindscrolltolower="lower"                 bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> -->
+              <view wx:for="{{queryitems}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+                <van-card
+                  num="{{item.goodsCount}}"
+                  price="{{item.goodsPrice}}"
+                  desc="{{item.goodsDescribe}}"
+                  title="{{item.goodsName}}"
+                  thumb="{{item.goodsPicture}}"
+                >
+                  <view slot="tags" class="tag">
+                    <view class="tags">{{item.goodLabel1}}</view>
+                    <view class="tags">{{item.goodLabel2}}</view>
+                    <view class="tags">{{item.goodLabel3}}</view>
+                  </view>
+                  <view slot="footer">
+                    <van-icon name="shopping-cart-o" color="red" size="20px" />
+                  </view>
+                </van-card>
+                </view> 
+
+          <!-- </scroll-view> -->
+  </view>
+</view>

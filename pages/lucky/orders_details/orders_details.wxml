@@ -1,0 +1,21 @@
+<!--pages/lucky/orders_details/orders_details.wxml-->
+<view class="main">
+
+        <view class="cart-box">
+        <!-- 开始遍历 -->
+            <view class="cart-list" wx:for="{{od}}"  wx:key="{{index}}">
+<!-- 点击图片跳转商品详情 -->
+                <navigator url="/pages/one/goods_ details/goods_ details?goodsId={{item.goodsId}}">
+                  <image wx:if="{{p[index].length>0}}" class="cart-thumb" src="{{p[index]}}"></image>
+                </navigator>
+          <!-- 商品标题 -->
+                <text class="cart-pro-name" >{{item.goodsName}}</text>
+          <!-- 商品价格 -->
+                <text class="cart-pro-price" style="color:red">￥{{item.goodsPrice}}</text>
+          <!-- 购买数量-->
+                <view class="cart-count-box">
+                    <text class="cart-count-num">购买数量:{{item.buyCount}}</text>
+                </view>
+            </view>
+        </view>
+</view>

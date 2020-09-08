@@ -1,0 +1,28 @@
+<!--pages/goods_ details/goods.wxml-->
+<!--pages/userRegist/regist.wxml-->
+<view>
+<view>
+    <image class="img" src='http://www.cxysl.cn/images/WX_img/C_logo.png'></image>
+</view>
+<view class='content'>
+<form bindsubmit='doLogin'>
+<view class='account'>
+  <view class='title'>账号名</view>
+  <view class='num'><input name="username" placeholder='账号名' placeholder-style='color:#999999; ' value=''/></view>
+</view>
+<view class='hr'></view>
+<view class='account'>
+   <view class='title'>密码</view>
+  <view class='num'><input name="password"  placeholder='请输入密码' placeholder-style='color:#999999; ' value=''/></view>
+  <view class='see'>
+      <image src='http://www.cxysl.cn/images/WX_img/C_logo.png' style='width:42px;height:30px'></image>
+  </view>
+</view>
+<view class='hr'></view>
+<button form-type='submit' class='weui-btn' type='primary' style='width:90%'>登录</button>
+<button bindtap='goRegist'  class='weui-btn' type='primary' style='width:90%'> 去注册</button>
+
+</form>
+</view>
+
+</view>

@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/one/detail",
+    "pages/lucky/orders/orders",
+    "pages/lucky/lucky",
+    "pages/two/logs",
+    "pages/one/one",
+    "pages/one/goods_ details/goods_ details",
+    "pages/index/user_means/user_means",
+    "pages/index/index",
+    "pages/login/new_user/new_user",
+    "pages/two/query",
+    "pages/lucky/orders_details/orders_details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "程序员小铺",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/one/one",
+        "iconPath": "pages/img/icon-test.png",
+        "selectedIconPath": "pages/img/home-mian.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/two/logs",
+        "iconPath": "pages/img/huangguanguanjundiyihuiyuan.png",
+        "selectedIconPath": "pages/img/vip.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/lucky/lucky",
+        "iconPath": "pages/img/star.png",
+        "selectedIconPath": "pages/img/xingxing.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/img/mymian.png",
+        "selectedIconPath": "pages/img/yonghu.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-row": "@vant/weapp/row/index",
+    "miniprogram_npm": "@vant/weapp/info/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}
